@@ -14,7 +14,8 @@
  *
  */
 function filterEvens(numbers) {
-	// your code goes here!
+  // your code goes here!
+  return numbers.filter(number => number % 2 == 0);
 }
 
 /**
@@ -29,7 +30,8 @@ function filterEvens(numbers) {
  *
  */
 function filterOdds(numbers) {
-	// your code goes here!
+  // your code goes here!
+  return numbers.filter(number => number % 2 == 1);
 }
 
 /**
@@ -43,13 +45,71 @@ function filterOdds(numbers) {
  *
  */
 function sumOdds(numbers) {
-	// your code goes here!
+  // your code goes here!
+  return filterOdds(numbers).reduce((acc, val) => acc + val);
 }
 
-
-
-let states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming']
-
+let states = [
+  "Alabama",
+  "Alaska",
+  "American Samoa",
+  "Arizona",
+  "Arkansas",
+  "California",
+  "Colorado",
+  "Connecticut",
+  "Delaware",
+  "District of Columbia",
+  "Federated States of Micronesia",
+  "Florida",
+  "Georgia",
+  "Guam",
+  "Hawaii",
+  "Idaho",
+  "Illinois",
+  "Indiana",
+  "Iowa",
+  "Kansas",
+  "Kentucky",
+  "Louisiana",
+  "Maine",
+  "Marshall Islands",
+  "Maryland",
+  "Massachusetts",
+  "Michigan",
+  "Minnesota",
+  "Mississippi",
+  "Missouri",
+  "Montana",
+  "Nebraska",
+  "Nevada",
+  "New Hampshire",
+  "New Jersey",
+  "New Mexico",
+  "New York",
+  "North Carolina",
+  "North Dakota",
+  "Northern Mariana Islands",
+  "Ohio",
+  "Oklahoma",
+  "Oregon",
+  "Palau",
+  "Pennsylvania",
+  "Puerto Rico",
+  "Rhode Island",
+  "South Carolina",
+  "South Dakota",
+  "Tennessee",
+  "Texas",
+  "Utah",
+  "Vermont",
+  "Virgin Island",
+  "Virginia",
+  "Washington",
+  "West Virginia",
+  "Wisconsin",
+  "Wyoming"
+];
 
 /**
  * Receives a number (`minLength`)
@@ -65,7 +125,8 @@ let states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','Californ
  *
  */
 function stateNamesLongerThan(minLength) {
-	// your code goes here!
+  // your code goes here!
+  return states.filter(state => state.length > minLength);
 }
 
 /**
@@ -79,7 +140,8 @@ function stateNamesLongerThan(minLength) {
  *
  */
 function numberOfStateNamesLongerThan(minLength) {
-	// your code goes here!
+  // your code goes here!
+  return stateNamesLongerThan(minLength).length;
 }
 
 /**
@@ -108,9 +170,9 @@ function numberOfStateNamesLongerThan(minLength) {
  *
  */
 function replaceStateNames(newName, len) {
-	// your code goes here!
+  return states.map(state => (state.length == len ? newName : state));
 }
-
+console.log("test");
 /**
  * Receives a string
  * Returns the number of states with names that contain that string
@@ -122,14 +184,14 @@ function replaceStateNames(newName, len) {
  *
  */
 function numberOfStateNamesContaining(subString) {
-	// your code goes here!
+  // your code goes here!
+  return states.filter(state => state.match(subString)).length;
 }
-
 
 /**************************************************
 The following code runs the functions defined above
 ***************************************************/
-let numbers = [153,67,9,34,7,67,342,7,34,8656,2,124,5,43];
+let numbers = [153, 67, 9, 34, 7, 67, 342, 7, 34, 8656, 2, 124, 5, 43];
 
 // // filterEvens
 // let evens = filterEvens(numbers);
